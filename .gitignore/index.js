@@ -9,7 +9,7 @@ Client.on("ready", async () =>{
 });
 
 Client.on("guildMemberAdd", member => {
-    member.guild.channels.cache.find(channel => channel.id === "793925973220786186").send("Bienvenue à <@" + member.id + "> qui vient de rejoindre Twitter !")
+    member.guild.channels.cache.find(channel => channel.id === "806494454935846923").send("Bienvenue à <@" + member.id + "> qui vient de rejoindre Twitter !")
 });
 
 Client.on ("message", message => {
