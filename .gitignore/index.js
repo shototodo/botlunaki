@@ -12,27 +12,6 @@ Client.on("guildMemberAdd", member => {
     member.guild.channels.cache.find(channel => channel.id === "793925973220786186").send("Bienvenue à <@" + member.id + "> qui vient de rejoindre Twitter !")
 });
 
-Client.on("message", message => {
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-
-    if(message.content === prefix + "ping"){
-        message.channel.send("Pong.");
-    };
-
-    if(message.content === prefix + "stat"){
-        message.channel.send(message.author.username + " qui a pour identifiant :" + message.author.id + " a posté un message");
-    }
-
-    else if (message.content === prefix + "server"){
-        message.channel.send("Nom du serveur : " + message.guild.name + "\nNombre d'utilisateurs : " + message.guild.memberCount);
-    }
-
-    else if (message.content === prefix + "avatar"){
-        message.channel.send(`Votre avatar est : ${message.author.displayAvatarURL({ format: 'png'})}`)
-    }
-});
-
 Client.on ("message", message => {
     if(message.author.bot) return;
     if(message.channel.type == "dm")return;
@@ -82,7 +61,7 @@ Client.on ("message", message => {
                 message.reply("Membre non ou mal mentionné.");
             }
             else{
-                mention.roles.add("794512902928203796");
+                mention.roles.add("800407962099253248");
                 message.reply(mention.displayName + " mute avec succès.");
             }
         }
@@ -94,7 +73,7 @@ Client.on ("message", message => {
                 message.reply("Membre non ou mal mentionné.");
             }
             else{
-                mention.roles.remove("794512902928203796");
+                mention.roles.remove("800407962099253248");
                 message.reply(mention.displayName + " unmute avec succès.");
             }
         }
@@ -108,9 +87,9 @@ Client.on ("message", message => {
             else{
                 let args = message.content.split(" ");
 
-                mention.roles.add("794512902928203796");
+                mention.roles.add("800407962099253248");
                 setTimeout(function() {
-                    mention.roles.remove("794512902928203796");
+                    mention.roles.remove("800407962099253248");
                     message.channel.send("<@" + mention.id + "> Tu peux désormais de nouveau parler !");
                 }, args[2] * 1000 * 60)
             }
@@ -120,8 +99,8 @@ Client.on ("message", message => {
 
 
 Client.on('message', async message => {
-    if(message.author.id === "792794276550803476")return;
-    if(message.author.id === "783071972446961734")return;
+    if(message.author.id === "432518285540720640")return;
+    if(message.author.id === "784080043445190656")return;
 
     let blacklisted = ['discord.gg'];
   
@@ -187,8 +166,8 @@ Client.on("message", message => {
 
         var embed = new Discord.MessageEmbed()
             .setColor("#46b1ec")
-            .setTitle("** Deku **")
-            .setDescription("** Voici le menu d'aide que je peux t'apporter **\n\n ** Commande de modération **\n\n **+clear** : pour supprimer un certain nombre de message (max: 99 message).\n\n **+kick** : pour kick un membre du serveur.\n\n **+ban** : pour bannir un membre du serveur.\n\n **+mute** : pour rendre muet un membre du serveur.\n\n **+unmute ** : pour permattre à un membre muet de pourvoir à nouveau parler. \n\n **+tempmute** : rend muet un membre pendant un certain temps (en minute). \n\n ** Commande un peu plus fun** \n\n ** +stat ** : donne ton id. \n\n **+ping** : repond pong. \n\n **+avatar** : met ton avatar en plus grand. \n\n ** +server** : donne des renseignement sur le serveur.\n ")
+            .setTitle("** Lucky **")
+            .setDescription("** Voici le menu d'aide que je peux t'apporter **\n\n ** Commande de modération **\n\n **+clear** : pour supprimer un certain nombre de message (max: 99 message).\n\n **+kick** : pour kick un membre du serveur.\n\n **+ban** : pour bannir un membre du serveur.\n\n **+mute** : pour rendre muet un membre du serveur.\n\n **+unmute ** : pour permattre à un membre muet de pourvoir à nouveau parler. \n\n **+tempmute** : rend muet un membre pendant un certain temps (en minute).")
             .setThumbnail("https://i.pinimg.com/originals/df/fb/58/dffb58f131703a3471248f4e164f1836.gif")
             .setTimestamp()
         message.channel.send(embed);
