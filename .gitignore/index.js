@@ -196,6 +196,6 @@ Client.on("message", message => {
     }
 });
 
-Client.login("NzkyNzk0Mjc2NTUwODAzNDc2.X-i5NA.qsgMgsjBXYoVj-XB9wW9pJg2pCI");
+Client.login(process.env.TOKEN);
 
 
